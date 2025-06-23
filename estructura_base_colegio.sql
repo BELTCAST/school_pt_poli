@@ -33,17 +33,14 @@ CREATE TABLE Estudiante (
     FOREIGN KEY (municipio_id) REFERENCES Municipio(municipio_id)
 );
 
--- Crear tabla Solicitud
+-- Crear tabla Solicitud (sin Postulante)
 CREATE TABLE Solicitud (
     solicitud_id INT AUTO_INCREMENT PRIMARY KEY,
     renueva TINYINT(1),
-    postula TINYINT(1),
     fecha_solicitud DATETIME,
     grado_que_solicita VARCHAR(50),
     estudiante_id INT,
-    postulante_id INT,
-    FOREIGN KEY (estudiante_id) REFERENCES Estudiante(estudiante_id),
-    FOREIGN KEY (postulante_id) REFERENCES Postulante(postulante_id)
+    FOREIGN KEY (estudiante_id) REFERENCES Estudiante(estudiante_id)
 );
 
 -- Crear tabla Institucion
