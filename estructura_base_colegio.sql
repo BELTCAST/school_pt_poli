@@ -33,21 +33,6 @@ CREATE TABLE Estudiante (
     FOREIGN KEY (municipio_id) REFERENCES Municipio(municipio_id)
 );
 
--- Crear tabla Postulante
-CREATE TABLE Postulante (
-    postulante_id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100),
-    fecha_nacimiento DATETIME,
-    acudiente_id INT,
-    direccion VARCHAR(100),
-    telefono VARCHAR(20),
-    grado_aspiracion VARCHAR(50),
-    fecha_postulacion DATETIME,
-    municipio_id INT,
-    FOREIGN KEY (acudiente_id) REFERENCES Acudiente(acudiente_id),
-    FOREIGN KEY (municipio_id) REFERENCES Municipio(municipio_id)
-);
-
 -- Crear tabla Solicitud
 CREATE TABLE Solicitud (
     solicitud_id INT AUTO_INCREMENT PRIMARY KEY,
