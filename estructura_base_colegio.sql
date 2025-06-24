@@ -100,3 +100,10 @@ CREATE TABLE Grado_Asignatura (
     FOREIGN KEY (grado_id) REFERENCES Grado(grado_id),
     FOREIGN KEY (asignatura_id) REFERENCES Asignatura(asignatura_id)
 );
+
+INSERT INTO Municipio (nombre) VALUES
+('Bogotá'),
+('Medellín'),
+('Cali'),
+('Barranquilla'),
+('Cartagena');
